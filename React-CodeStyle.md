@@ -21,9 +21,48 @@ const HomeScreen = () => {
 
 ## 2. Define Component
 
-Tab size is 2 Spaces and all functions are arrow function.
+Tab size is 2 spaces and all functions are arrow function. Break a line between variables and function. And break a line between functions as well. 
 ```javascript
 const HomeScreen = () => {
   const [value, setValue] = useState(0);
+  const [name, setName] = useState("Jacob");
+
+  useEffect(() => {
+    setValue(1);
+  }, []);
+
+  changeName = (newName) => {
+    setName(newName);
+  }
+
+  return ();
 }
+```
+
+## 3. Virtual DOM
+
+If a component doesn't have any props, write it in a line. Put a space before ending mark.
+```javascript
+  return (
+    <View />
+  );
+```
+
+If a component has only 1 props, write it in a line as well. Put a space before ending mark.
+```javascript
+  return (
+    <View style={styles.container} />
+  );
+```
+
+If a component has more than 2 props, write props in next lines.
+```javascript
+  return (
+    <Button
+      style={styles.button}
+      color={'#007AFF'}
+      title={"Button"}
+      onPress={() => {}}
+    />
+  );
 ```
