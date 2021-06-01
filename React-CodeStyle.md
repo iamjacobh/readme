@@ -61,8 +61,22 @@ If a component has more than 2 props, write props in next lines.
     <Button
       style={styles.button}
       color={'#007AFF'}
-      title={"Button"}
+      title="Button"
       onPress={() => {}}
     />
+  );
+```
+
+If consition statement is needed to put between tags, write as following.
+```javascript
+  return (
+    <View>
+      {
+        condition == true ?
+          <View />
+          :
+          <View />
+      }
+    </View>
   );
 ```
